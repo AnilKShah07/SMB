@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- All CDN files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
     
   <!-- jQuery library -->
   <script src="JS/jquery.min.js"></script>
@@ -22,28 +22,229 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/sideBar.css">
 <!-- Custom js -->
-  <script type="text/javascript">
+<script src="js/custom.js"></script>
+  <!-- <script type="text/javascript">
     $(function(){
       $("#header").load("header.html"); 
       $("#footer").load("footer.html");
       $("#sideBar").load("sidebar.html");
     });
-  </script>
+  </script> -->
 
 </head>
 
 <body>
   <!-- header -->
-  <div id="header"></div>
+  <!-- <div id="header"></div> -->
+  
+<!-- Menu Section -->
+<div class="menuSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="logo">
+          <img src="images/logo.png" class="img-responsive">
+          <span> | Show My <span class="bills">Bills</span></span>
+        </div>
+        
+      </div>
+      
+      <div class="col-md-6">
+
+        <div class="row" id="userDetailsIcon">
+          <div class="col-xs-4">
+            
+          <div class="loginDetails">
+            <div>Welcome Anil Shah</div>
+            <div class="loginDateTime">31-03-2020 / 11:32 am</div>
+          </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="UserHover">
+              <span class="fa fa-user userIcon userIconDeactive"></span>
+              <span class="fa fa-play downArrow"></span>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <!-- App Menu -->
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<!-- user Detail -->
+<div class="userPanel">
+  <div class="upArrow">&#9650;</div>
+  <div class="closeBtn"><!-- <img src="images/close.png"> -->X</div>
+  <div class="UserDetails">
+    <div class="userPanelName"><span>Anil Shah</span><br><span class="userLastLogin">Last Login :- 31/03/2020</span></div>
+    <div class=""><span class="fa fa-user userPanelIcon"></span></div>
+  </div>
+  <hr class="hrLine">
+  <div class="userEditProfile"><p>Profile</p></div>
+  <div class="userSetting"><p data-toggle="modal" data-target="#mySetting">My Setting</p></div>
+  <div class="userSetting"><p data-toggle="modal" data-target="#languageList">App Language</p></div>
+  <div class="userSetting"><p><a href="">LogOut</a></p></div>
+</div>
+
+<!-- Popup for App language -->
+<div class="modal" id="languageList">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Popup Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">App Language List</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Popup body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="float-right"><a href=""><u>Save</u></a></div>
+          </div>
+        </div>
+        <div class="languageList">English<span class="float-right">&#10004;</span></div>
+        <div class="languageList">Hindi<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Marathi<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Gujrati<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Kannada<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Telugu<span class="float-right">&#128274;</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Popup for My Setting -->
+<div class="modal" id="mySetting">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Popup Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">My Setting</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Popup body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="float-right"><a href=""><u>Save</u></a></div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Select Language</span>
+          <span class="float-right mySettingLanguage">
+            <select class="form-control">
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Gujrati</option>
+              <option>Marathi</option>
+              <option>Kannada</option>
+              <option>Punjabi</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="clearfix">
+          <span class="float-left">Company Name</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Address</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">City</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">State</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Pin Code</span>
+          <span class="float-right mySettingFrom"><input type="number" class="form-control"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
   <!-- Side bar -->
-  <div id="sideBar"></div>
+  <!-- <div id="sideBar"></div> -->
+  <!-- sideBar -->
+<div class="middileContainer">
+  <!-- sideNav -->
+  <div class="sideBar">
+      <!-- toggle button -->
+      <div class="float-left">
+          <div id="accordion">
+              <div class="card">
+                  <a class="card-link" data-toggle="collapse" href="#admin" id="card1">Admin <span class="symbol1 float-right" id="idSymbol1">+</span></a>
+                  <div id="admin" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                          <ul>
+                              <li>Menu 1</li>
+                              <li>Menu 2</li>
+                              <li>Menu 3</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="card">
+                  <a class="card-link" data-toggle="collapse" href="#biller" id="card2">Biller <span class="symbol2 float-right" id="idSymbol2">+</span></a>
+                  <div id="biller" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                          <ul class="btnsGroup">
+                              <li class="clickMenu" id="4">Dashboard</li>
+                              <li class="clickMenu" id="5">Product Information</li>
+                              <li class="clickMenu" id="6">List of Bank</li>
+                              <li class="clickMenu" id="7">Localization of Bank Name</li>
+                              <li class="clickMenu" id="8"></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="card">
+                  <a class="card-link" data-toggle="collapse" href="#buyers" id="card3">Buyers <span class="symbol3 float-right" id="idSymbol3">+</span></a>
+                  <div id="buyers" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                          <ul>
+                              <li>Menu 1</li>
+                              <li>Menu 2</li>
+                              <li>Menu 3</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+          
+      </div>
+      
+  </div>
+  <div class="toggle float-right"></div>
+
+  <!-- OutPut Section -->
+  <div class="sideBarOutput"></div>
+</div>
   <!-- Footer -->
-  <div id="footer"></div>
+  <!-- <div id="footer"></div> -->
+  <footer class="pageFooter">
+    <div class="container footerText">
+        <div class="float-left">About <a href="" class="about">Show My Bills</a></div>
+        <div class="termsAndServices float-right">&#169; Posiview Apps 2020</div>
+    </div>
+</footer>
 
   <!-- sidePanel -->
   <!-- <script src="js/sidePanel.min.js"></script> -->
   <script src="js/home.js"></script>
-  <!-- <script src="js/sidebar.js"></script> -->
+  
 
 
 </body>
