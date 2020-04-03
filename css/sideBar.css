@@ -1,0 +1,77 @@
+.middileContainer{
+    display:flex;
+    min-height: 500px;
+    width: 100%;
+}
+/* side nav Menu */
+.toggle{
+    cursor: pointer;
+    background-color: #3163a2;
+    color: #fff;
+    border-radius: 0px 20px 20px 0px;
+    padding: 0px 0px;
+    height: 32px;
+    width: 20px;
+    margin-top: 230px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sideBar{
+    background-color: #3163a2;
+    box-shadow: 4px -8px 8px 2px #9E9E9E;
+    padding: 10px;
+}
+.card{
+    background: #3163a2;
+    border-color: #3163a2;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    width: 180px;
+}
+/* #adminFunction{
+    cursor: pointer;
+    background-color: #32087d;
+    border-color: #32087d;
+    border-bottom: 1px solid #fff;
+    padding: 4px 10px;
+    width: 130%;
+    color: #fff;
+} */
+.card-link{
+    color: #fff;
+    font-size: 18px;
+}
+.card-link:hover,.card-link:focus{
+    color: #ff9d0d;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.symbol{
+    /* border-radius: 20px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #fff; */
+    font-weight: bold;
+}
+.sideBar ul{
+    margin-left: -30px;
+}
+.sideBar ul li{
+    list-style: none;
+    /* color: #fff; */
+    text-decoration: underline;
+    padding: 3px;
+    cursor: pointer;
+}
+.clickMenu{
+    color: #fff;
+}
+.sideBar ul li:hover{
+    color: #ff9d0d;
+}
+.sideBarOutput{
+    padding: 10px;
+}
+.activeTab{
+    color: #eb7c49;
+}

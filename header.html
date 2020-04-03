@@ -1,0 +1,163 @@
+
+<!-- Menu Section -->
+<div class="menuSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="logo">
+          <img src="images/logo.png" class="img-responsive">
+          <span> | Show My <span class="bills">Bills</span></span>
+        </div>
+        
+      </div>
+      
+      <div class="col-md-6">
+        <!-- <div class="userDetails">
+          <div class="username">Welcome Anil</div>
+          <span class="userLogo"></span>
+          <div class="loginDateTime">dd-mm-yy / ss:mm:hh</div>
+        </div> -->
+        <div class="row" id="userDetailsIcon">
+          <div class="col-xs-4">
+            <!-- <div class="notificationIcon">
+              <i class="fa fa-bell"></i>
+              <span class="badge badge-pill badge-warning notification">3</span>
+          </div> -->
+          <div class="loginDetails">
+            <div>Welcome Anil Shah</div>
+            <div class="loginDateTime">31-03-2020 / 11:32 am</div>
+          </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="UserHover">
+              <span class="fa fa-user userIcon userIconDeactive"></span>
+              <span class="fa fa-play downArrow"></span>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <!-- App Menu -->
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<!-- user Detail -->
+<div class="userPanel">
+  <div class="upArrow">&#9650;</div>
+  <div class="closeBtn"><!-- <img src="images/close.png"> -->X</div>
+  <div class="UserDetails">
+    <div class="userPanelName"><span>Anil Shah</span><br><span class="userLastLogin">Last Login :- 31/03/2020</span></div>
+    <div class=""><span class="fa fa-user userPanelIcon"></span></div>
+  </div>
+  <hr class="hrLine">
+  <div class="userEditProfile"><p>Profile</p></div>
+  <div class="userSetting"><p data-toggle="modal" data-target="#mySetting">My Setting</p></div>
+  <div class="userSetting"><p data-toggle="modal" data-target="#languageList">App Language</p></div>
+  <div class="userSetting"><p><a href="">LogOut</a></p></div>
+</div>
+
+<!-- Popup for App language -->
+<div class="modal" id="languageList">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Popup Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">App Language List</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Popup body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="float-right"><a href=""><u>Save</u></a></div>
+          </div>
+        </div>
+        <div class="languageList">English<span class="float-right">&#10004;</span></div>
+        <div class="languageList">Hindi<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Marathi<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Gujrati<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Kannada<span class="float-right">&#128274;</span></div>
+        <div class="languageList">Telugu<span class="float-right">&#128274;</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Popup for My Setting -->
+<div class="modal" id="mySetting">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Popup Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">My Setting</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Popup body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="float-right"><a href=""><u>Save</u></a></div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Select Language</span>
+          <span class="float-right mySettingLanguage">
+            <select class="form-control">
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Gujrati</option>
+              <option>Marathi</option>
+              <option>Kannada</option>
+              <option>Punjabi</option>
+            </select>
+          </span>
+        </div>
+
+        <div class="clearfix">
+          <span class="float-left">Company Name</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Address</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">City</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">State</span>
+          <span class="float-right mySettingFrom"><input type="text" class="form-control" ></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Pin Code</span>
+          <span class="float-right mySettingFrom"><input type="number" class="form-control"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+  $(".signUp").click(function(){
+      $(".fromContainer").css("display","none");
+      $(".signUpContainer").css("display","block");
+  });
+  
+  $(".UserHover").click(function(){
+    $(".userPanel").show();
+    $(".userIcon").addClass("activeUserIcon").removeClass("userIconDeactive");
+    $(".downArrow").addClass("activeDownArrow");
+  });
+  $(".closeBtn").click(function(){
+    $(".userPanel").hide();
+    $(".userIcon").removeClass("activeUserIcon").addClass("userIconDeactive");
+    $(".downArrow").removeClass("activeDownArrow");
+  });
+    </script>
