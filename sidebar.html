@@ -111,7 +111,7 @@ $(document).ready(function(){
         flag=!flag;
         var cardLinkId = $(this).attr('id');
         var ariaExpnd = $(this).attr("aria-expanded");
-        //var symbolId = $($(this)>"span").attr('className');
+
         var symbolId = cardLinkId.replace("card","");
         console.log("Clicked card "+cardLinkId);
         console.log("Clicked symbol "+"symbol"+symbolId);
