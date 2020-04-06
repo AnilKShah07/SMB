@@ -62,11 +62,16 @@
 .userBox,.passBox,.answerBox{
   display: flex;
 }
-.userName,.password,.answer,.number,.equal{
+.userName,.password,.answer,.number,.equal,.otpText,.setUserIdText,.userNewPassText,.userConfrimPassText,.userMPinText,.userConfrimMPinText{
   width: 30%;
   padding: 7px 0;
   font-size: 16px;
 }
+.otpText{width: 61%;}
+.userNewPassText{width: 80%;}
+.userConfrimPassText{width: 61%;}
+.userMPinText,.userConfrimMPinText{width: 50%;}
+
 .answer{width: 30%;}
 .number{margin-left: 20px;}
 .equal{width: 5%;}
@@ -105,6 +110,40 @@
   padding: 10px 25px;
   border-radius: 30px;
   font-size: 18px;
+  cursor: pointer;
+  width: 50%;
+}
+.signUpToContinue{
+  display: none;
+  background-color: #fff;
+}
+.verify{
+  background-color: #53a7e1;
+  width: 50%;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.verify:hover{
+  background-color: #eea01e;
+  transition: background-color 0.2s;
+}
+.createAccount{
+  background-color: #53a7e1;
+  width: 50%;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.createAccount:hover{
+  background-color: #eea01e;
+  transition: background-color 0.2s; 
+}
+.userCredentials{
+  display: none;
+  background-color: #fff;
 }
 .signUpBtn:hover{
   color: #fff;
@@ -144,16 +183,16 @@
   box-shadow: 0px 0px 7px 2px #575858;
   display: none;
 }
-.selectBox,.newUserBox,.conactNo{
+.selectBox,.newUserBox,.conactNo,.UserOpt,.setUserId,.userOtp,.userNewPass,.userConfrimPass,.userMPin,.userConfrimMPin{
   display: flex;
 }
 .language,.newUser,.phoneNo{
   font-size: 18px;
   width: 30%;
 }
-.selectInput,.newUserName,#number{
+/* .selectInput,#newUserName,#number,#otp{
   width: 220px;
-}
+} */
 .checkbox{
   font-size: 18px;
 }
@@ -282,6 +321,19 @@
 .htLine{
 	background-color: #2fb5f282;
 }
+.userEditProfile,.companySetting,.languageSetting{
+  color:blue;
+  cursor: pointer;
+}
+.userEditProfile:hover,.companySetting:hover,.languageSetting:hover{
+  color:#e96529;
+  cursor: pointer;
+}
+.myprofileInput{width: 60%;}
+#location{width: 80%;float: left;}
+.fa-globe{float: right;
+  padding: 11px;
+  color: #673AB7;}
 .closeBtn{
 	position: absolute;
     right: 3px;

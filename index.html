@@ -20,103 +20,17 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 
+<!-- Call login page -->
+<script type=text/javascript>
+	$(function(){
+		$(".loginPage").load("login.html");
+	})
+</script>
+
 <body class="loginBody">
 	
-	  
-	<div class="container" id="idlogin">
-		<div class="row">
-			<div class="col-md-7">
-				<div class="smbLogo">
-					<img src="images/logo.png" alt="">
-					<div class="welcomeText">Show My <span>Bills</span></div>
-				</div>
+	<div class="loginPage"></div>  
 
-			</div>
-
-			<div class="col-md-5">
-				<div class="fromContainer">
-					<div class="loginHead">Login</div>
-					<form action="" class="was-validated" id="idFrom">
-						
-						<div class="userBox">
-							<span class="userName">User ID</span>
-							<div><input type="text" class="form-control" id="uname" placeholder="Enter Uaser ID" name="uname" required></div>
-						</div>
-						<br>
-						<div class="passBox">
-							<span class="password">Password</span>
-							<div><input type="text" class="form-control" id="pass" placeholder="Enter Password" name="pass" required></div>
-						</div>
-						<br>
-						<div class="answerBox">
-							<span class="answer">Answer</span>
-							<span class="number text-center">5+4 &nbsp;</span>
-							<span class="equal text-center"> = </span>
-							<div class="inputBox">&nbsp; <input type="text" class="form-control " id="idAns" name="ans" required><span class="refresh text-center"> &#x21BA; </span></div>
-						</div>
-						<br>
-						
-						<center>
-							<a href="home.html" class="goBtn">Go</a>
-						</center>
-						<br>
-						<div class="login&signUp">
-							<span>New to SMB ? <span class="newSignUp">Sign_Up</span></span>
-							<span class="float-right"><a href=""><u>Login Assistance</u></a></span>
-						</div>
-					</form>
-				</div>
-
-				<div class="signUpContainer">
-					<div class="loginHead">Sign Up</div>
-					<form action="" class="was-validated" id="idFrom">
-						
-						<div class="selectBox">
-							<span class="language">Language</span>
-							<div><select class="form-control selectInput" id="sel1" name="sellist1">
-								<option>English</option>
-								<option>Hindi</option>
-								<option>Marathi</option>
-								<option>Punjabi</option>
-							  </select>
-							</div>
-						</div>
-						<br>
-						<div class="newUserBox">
-							<span class="newUser">User Name</span>
-							<div><input type="text" class="form-control" id="newUserName" placeholder="Enter User Name" name="newUserName" required></div>
-						</div>
-						<br>
-						<div class="conactNo">
-							<span class="phoneNo">Mobile no.</span>
-							<div><input type="number" class="form-control" id="number" placeholder="Enter Mobile number" name="phoneNo" required></div>
-						</div>
-						<br>
-						<div class="checkbox">
-							<label><input type="checkbox" value=""> I read and accept the <a href="#">License Agreement</a></label>
-						</div>
-						<br>
-						<center>
-							<a href="home.html" class="signUpBtn">Sign Up</a>
-						</center>
-						<br>
-						<div class="loginsignUp">
-							<span><a href="#"class="signUp"><u>About show my bills</u></a></span>
-							<span class="float-right"><a href=""><u>Privacy Policy</u></a></span>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br><br><br>
-	<div class="footer">
-		<p class="text-center"><a href="" class="loginFooter">&#169; Posiview Apps 2020</a></p>
-	</div>
-
-
-	<!-- Custom JS -->
-<script src="js/custom.js"></script>
 </body>
 
 </html>

@@ -2,22 +2,27 @@
 //     $(".fromContainer").css("display","none");
 //     $(".signUpContainer").css("display","block");
 // });
+$(document).ready(function(){
 
-$(".signUp").click(function(){
-    $(".fromContainer").css("display","none");
-    $(".signUpContainer").css("display","block");
+    $(".newSignUp").click(function(){
+        $(".fromContainer").css("display","none");
+        $(".signUpContainer").css("display","block");
+    });
+    
+    $(".UserHover").click(function(){
+      $(".userPanel").show();
+      $(".userIcon").addClass("activeUserIcon").removeClass("userIconDeactive");
+      $(".downArrow").addClass("activeDownArrow");
+    });
+    $(".closeBtn").click(function(){
+      $(".userPanel").hide();
+      $(".userIcon").removeClass("activeUserIcon").addClass("userIconDeactive");
+      $(".downArrow").removeClass("activeDownArrow");
+    });
+
 });
 
-$(".UserHover").click(function(){
-  $(".userPanel").show();
-  $(".userIcon").addClass("activeUserIcon").removeClass("userIconDeactive");
-  $(".downArrow").addClass("activeDownArrow");
-});
-$(".closeBtn").click(function(){
-  $(".userPanel").hide();
-  $(".userIcon").removeClass("activeUserIcon").addClass("userIconDeactive");
-  $(".downArrow").removeClass("activeDownArrow");
-});
+
 
 $(document).ready(function(){
     // For toggle

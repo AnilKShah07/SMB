@@ -83,10 +83,61 @@
     <div class=""><span class="fa fa-user userPanelIcon"></span></div>
   </div>
   <hr class="hrLine">
-  <div class="userEditProfile"><p>Profile</p></div>
-  <div class="userSetting"><p data-toggle="modal" data-target="#mySetting">My Setting</p></div>
-  <div class="userSetting"><p data-toggle="modal" data-target="#languageList">App Language</p></div>
-  <div class="userSetting"><p><a href="">LogOut</a></p></div>
+  <div class="userEditProfile"><p data-toggle="modal" data-target="#myprofile">My Profile</p></div>
+  <div class="companySetting"><p data-toggle="modal" data-target="#companyInformation">Company Information</p></div>
+  <div class="languageSetting"><p data-toggle="modal" data-target="#languageList">App Language</p></div>
+  <div class="logout"><p><a href="">LogOut</a></p></div>
+</div>
+
+<!-- Popup for App My profile -->
+<div class="modal" id="myprofile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Popup Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">My profile</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <!-- Popup body -->
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="float-right"><a href=""><u>Save</u></a></div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Brief Address</span>
+          <span class="float-right myprofileInput"><input type="text" class="form-control" placeholder="Enter your address"></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Set Location</span>
+          <span class="float-right myprofileInput"><input type="text" class="form-control" id="location" placeholder="Enter your location"><span class="fa fa-globe"></span></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Select Bank</span>
+          <span class="float-right myprofileInput">
+            <select class="form-control">
+              <option>IDBI Bank</option>
+              <option>ICIC Bank</option>
+              <option>SBI Bank</option>
+              <option>BOI Bank</option>
+              <option>BOM Bank</option>
+              <option>PNB Bank</option>
+            </select>
+          </span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Registeres Mobile </span>
+          <span class="float-right myprofileInput"><input type="text" class="form-control" placeholder="Enter registered mobile number"></span>
+        </div>
+        <div class="clearfix">
+          <span class="float-left">Set Profile Pic</span>
+          <span class="float-right myprofileInput"><input type="file"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- Popup for App language -->
@@ -118,12 +169,12 @@
 </div>
 
 <!-- Popup for My Setting -->
-<div class="modal" id="mySetting">
+<div class="modal" id="companyInformation">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- Popup Header -->
       <div class="modal-header">
-        <h4 class="modal-title">My Setting</h4>
+        <h4 class="modal-title">Company Information</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <!-- Popup body -->

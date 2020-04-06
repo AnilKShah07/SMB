@@ -1,0 +1,198 @@
+<script class="text/javascript">
+	$(document).ready(function(){
+
+		$(".newSignUp").click(function(){
+			$(".fromContainer").css("display","none");
+			$(".signUpContainer").css("display","block");
+		});
+
+		$(".signUpBtn").click(function(){
+			$(".signUpContainer").css("display","none");
+			$(".signUpToContinue").css("display","block");
+		});
+
+		$(".verify").click(function(){
+			$(".signUpToContinue").css("display","none");
+			$(".userCredentials").css("display","block");
+		});
+
+		$(".createAccount").click(function() {
+			window.location.replace("home.html");
+		});  
+
+	});
+</script>
+
+<div class="container" id="idlogin">
+	<div class="row">
+		<div class="col-md-7">
+			<div class="smbLogo">
+				<img src="images/logo.png" alt="">
+				<div class="welcomeText">Show My <span>Bills</span></div>
+			</div>
+
+		</div>
+
+		<div class="col-md-5">
+
+			<!------------------------------- User Login ---------------------------------->
+			<div class="fromContainer">
+				<div class="loginHead">Login</div>
+				<form action="" class="was-validated" id="idFrom">
+					
+					<div class="userBox">
+						<span class="userName">User ID</span>
+						<div><input type="text" class="form-control" id="uname" placeholder="Enter Uaser ID" name="uname" required></div>
+					</div>
+					<br>
+					<div class="passBox">
+						<span class="password">Password</span>
+						<div><input type="text" class="form-control" id="pass" placeholder="Enter Password" name="pass" required></div>
+					</div>
+					<br>
+					<div class="answerBox">
+						<span class="answer">Answer</span>
+						<span class="number text-center">5+4 &nbsp;</span>
+						<span class="equal text-center"> = </span>
+						<div class="inputBox">&nbsp; <input type="text" class="form-control " id="idAns" name="ans" required><span class="refresh text-center"> &#x21BA; </span></div>
+					</div>
+					<br>
+					
+					<center>
+						<a href="home.html" class="goBtn">Go</a>
+					</center>
+					<br>
+					<div class="login&signUp">
+						<span>New to SMB ? <span class="newSignUp">Sign_Up</span></span>
+						<span class="float-right"><a href=""><u>Login Assistance</u></a></span>
+					</div>
+				</form>
+			</div>
+
+			<!------------------------------- For New User ---------------------------------->
+
+			<div class="signUpContainer">
+				<div class="loginHead">Sign Up</div>
+				<form action="" class="was-validated" id="idFrom">
+					
+					<div class="selectBox">
+						<span class="language">Language</span>
+						<div><select class="form-control selectInput" id="sel1" name="sellist1">
+							<option>English</option>
+							<option>Hindi</option>
+							<option>Marathi</option>
+							<option>Punjabi</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<div class="newUserBox">
+						<span class="newUser">User Name</span>
+						<div><input type="text" class="form-control" id="newUserName" placeholder="Enter User Name" name="newUserName" required></div>
+					</div>
+					<br>
+					<div class="conactNo">
+						<span class="phoneNo">Mobile no.</span>
+						<div><input type="number" class="form-control" id="number" placeholder="Enter Mobile number" name="phoneNo" required></div>
+					</div>
+					<br>
+					<div class="checkbox">
+						<label><input type="checkbox" value=""> I read and accept the <a href="#">License Agreement</a></label>
+					</div>
+					<center>
+						<div class="signUpBtn">Next Step</div>
+					</center>
+					<br>
+					<div class="loginsignUp">
+						<span><a href="#"class="signUp"><u>About show my bills</u></a></span>
+						<span class="float-right"><a href=""><u>Privacy Policy</u></a></span>
+					</div>
+				</form>
+			</div>
+
+			<!------------------------------- For OTP ---------------------------------->
+
+			<div class="signUpToContinue">
+				<div class="loginHead">Sign Up To Continue</div>
+				<form action="" class="was-validated" id="idFrom">
+					
+					<p>SMB has sent OTP to your registered mobile number</p>
+
+					<div class="UserOpt">
+						<span class="otpText">Enter OTP</span>
+						<div>
+							<input type="text" class="form-control" id="otp" placeholder="Enter Mobile number" name="phoneNo" required>
+							<span class="remainingTime"><span>30</span>second remaining <a href=""><u>Resend OTP</u></a></span>
+						</div>
+					</div>
+					<br>
+					<center>
+						<div class="verify">Verify OTP</div>
+					</center>
+					<br>
+					<div class="loginsignUp">
+						<span><a href="#"class="signUp"><u>About show my bills</u></a></span>
+						<span class="float-right"><a href=""><u>Privacy Policy</u></a></span>
+					</div>
+				</form>
+			</div>
+
+			<!-------------------- New User Credentials ------------------------>
+
+			<div class="userCredentials">
+				<div class="loginHead">My Credentials</div>
+				<form action="" class="was-validated" id="idFrom">
+
+					<div class="setUserId">
+						<span class="setUserIdText">Set User Id</span>
+						<div><input type="text" class="form-control" id="otp" placeholder="Set new user ID" name="phoneNo" required></div>
+					</div>
+					<br>
+					<div class="userOtp">
+						<span class="otpText">Enter OTP</span>
+						<input type="text" class="form-control" id="otp" placeholder="Enter OTP" name="phoneNo" required>
+						<span class="remainingTime"><a href="">&nbsp;<u>Resend OTP</u></a></span>
+					</div>
+					<br>
+					<div class="userNewPass">
+						<span class="userNewPassText">Set Password</span>
+						<input type="text" class="form-control" id="pass" placeholder="Create Password" name="phoneNo" required>
+						<span class="remainingTime"><a href="">&nbsp;<u>See requirement</u></a></span>
+					</div>
+					<br>
+					<div class="userConfrimPass">
+						<span class="userConfrimPassText">Confrim Password</span>
+						<input type="text" class="form-control" id="pass" placeholder="Confrim Password" name="phoneNo" required>
+						<span class="remainingTime"><a href="">&nbsp;<u>Strong</u></a></span>
+					</div>
+					
+					<div class="userMPin">
+						<span class="userMPinText">Set M Pin</span>
+						<input type="text" class="form-control" id="userPin" placeholder="Set M Pin" name="phoneNo" required>
+						<span class="remainingTime"><a href="">&nbsp;<u>?</u></a></span>
+					</div>
+					<br>
+					<div class="userConfrimMPin">
+						<span class="userConfrimMPinText">Confrim M Pin</span>
+						<input type="text" class="form-control" id="confrimPin" placeholder="Confrim M pin" name="phoneNo" required>
+						<span class="remainingTime"><a href="">&nbsp;<u>?</u></a></span>
+					</div>
+					<br>
+					<center>
+						<div class="createAccount">Create Account</div>
+					</center>
+					<br>
+					<div class="loginsignUp">
+						<span><a href="#"class="signUp"><u>About show my bills</u></a></span>
+						<span class="float-right"><a href=""><u>Privacy Policy</u></a></span>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+<br><br><br>
+<div class="footer">
+	<p class="text-center"><a href="" class="loginFooter">&#169; Posiview Apps 2020</a></p>
+</div>
