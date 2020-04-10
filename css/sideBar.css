@@ -74,4 +74,6 @@
 }
 .activeTab{
     color: #eb7c49;
+    background-image: linear-gradient(to right, #3162a2,#3162a2, #ea7427 130%);
+    border-right: 1px solid #eb7c49;
 }

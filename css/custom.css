@@ -5,153 +5,24 @@
 	width: 100%;
 	height: 100%;
 } */
-.fromContainer{
-  font-family: sans-serif;
-  box-shadow: 0px 0px 7px 2px #575858;
-  background-color: #fff;
-  width: 90%;
-  float: right;
-}
+
+/* --------------------------------Css for Index------------------------------------------ */
 .loginBody{
   background-image: linear-gradient(to right, #03A9F4 , #009688);
   height: 1px;
   width: 100%;
 }
+
 #idlogin{
   margin-top: 10%;
 }
+/* Welcome Logo and welcom Text css */
 .smbLogo{
   text-align: center;
 }
 .smbLogo img{
   width: 30%;
   height: 100%;
-}
-.loginHead{
-  background-color: #53a7e1;
-  padding: 10px 21px;
-  font-size: 24px;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0px 3px 4px -1px #9E9E9E;
-}
-.loginDetails{
-  color: #fff;
-  text-align: center;
-  width: 180px;
-}
-.UserDetails{
-  height: 56px;
-}
-.userSetting{
-  cursor: pointer;
-  color: blue;
-}
-.mySettingLanguage,.mySettingFrom{
-  width: 60%;
-}
-.clearfix{
-  margin: 10px;
-}
-.languageList{
-  padding: 10px 20px;
-    border-radius: 30px;
-    margin: 10px;
-    box-shadow: 0px 0px 4px 2px #eee;
-}
-.userBox,.passBox,.answerBox{
-  display: flex;
-}
-.userName,.password,.answer,.number,.equal,.otpText,.setUserIdText,.userNewPassText,.userConfrimPassText,.userMPinText,.userConfrimMPinText{
-  width: 30%;
-  padding: 7px 0;
-  font-size: 16px;
-}
-.otpText{width: 61%;}
-.userNewPassText{width: 80%;}
-.userConfrimPassText{width: 61%;}
-.userMPinText,.userConfrimMPinText{width: 50%;}
-
-.answer{width: 30%;}
-.number{margin-left: 20px;}
-.equal{width: 5%;}
-#idAns{width: 40%;}
-.refresh{
-  font-size: 25px;
-    margin-left: 8px;
-}
-.inputBox{
-  display: flex;
-}
-#idFrom{
-  padding: 30px 30px;
-}
-.goBtn{
-  background-color: #53a7e1;
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: #fff;
-}
-.goBtn:hover{
-  color: #fff;
-  background-color: #eea01e;
-  transition: background-color 0.2s;
-}
-.newSignUp{
-  color: #5e76d9;
-  cursor: pointer;
-}
-.newSignUp:hover{
-  text-decoration: none;
-}
-.signUpBtn{
-  background-color: #53a7e1;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-size: 18px;
-  cursor: pointer;
-  width: 50%;
-}
-.signUpToContinue{
-  display: none;
-  background-color: #fff;
-}
-.verify{
-  background-color: #53a7e1;
-  width: 50%;
-  border-radius: 30px;
-  padding: 10px;
-  color: #fff;
-  cursor: pointer;
-}
-.verify:hover{
-  background-color: #eea01e;
-  transition: background-color 0.2s;
-}
-.createAccount{
-  background-color: #53a7e1;
-  width: 50%;
-  border-radius: 30px;
-  padding: 10px;
-  color: #fff;
-  cursor: pointer;
-}
-.createAccount:hover{
-  background-color: #eea01e;
-  transition: background-color 0.2s; 
-}
-.userCredentials{
-  display: none;
-  background-color: #fff;
-}
-.signUpBtn:hover{
-  color: #fff;
-  background-color: #eea01e;
-  transition: background-color 0.2s;
-}
-.logoText{
-  margin-top: 130px;
 }
 .welcomeText{
   color: #fff;
@@ -174,6 +45,68 @@
 .welcomeText span{
   color: #eea01e;
 }
+
+/* ---------------------------fromContainer css--------------------------------- */
+.fromContainer{
+  font-family: sans-serif;
+  box-shadow: 0px 0px 7px 2px #575858;
+  background-color: #fff;
+  width: 90%;
+  float: right;
+}
+#idFrom{
+  padding: 30px 30px;
+}
+.loginHead{
+  background-color: #53a7e1;
+  padding: 10px 21px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0px 3px 4px -1px #9E9E9E;
+}
+.userBox,.passBox,.answerBox{
+  display: flex;
+}
+.selectBox,.newUserBox,.conactNo,.UserOpt,.setUserId,.userOtp,.userNewPass,.userConfrimPass,.userMPin,.userConfrimMPin{
+  display: flex;
+}
+.userName,.password,.answer,.number,.equal,.otpText,.setUserIdText,.userNewPassText,.userConfrimPassText,.userMPinText,.userConfrimMPinText{
+  width: 30%;
+  padding: 7px 0;
+  font-size: 16px;
+}
+.answer{width: 30%;}
+.number{margin-left: 20px;}
+.equal{width: 5%;}
+#idAns{width: 40%;}
+.refresh{
+  font-size: 25px;
+  margin-left: 8px;
+}
+.inputBox{
+  display: flex;
+}
+
+.goBtn{
+  background-color: #53a7e1;
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #fff;
+}
+.goBtn:hover{
+  color: #fff;
+  background-color: #eea01e;
+  transition: background-color 0.2s;
+}
+.newSignUp{
+  color: #5e76d9;
+  cursor: pointer;
+}
+.newSignUp:hover{
+  text-decoration: none;
+}
+/* -----------------------For New User---------------------------------- */
 .signUpContainer{
   background-color: #fff;
   font-size: 24px;
@@ -183,47 +116,114 @@
   box-shadow: 0px 0px 7px 2px #575858;
   display: none;
 }
-.selectBox,.newUserBox,.conactNo,.UserOpt,.setUserId,.userOtp,.userNewPass,.userConfrimPass,.userMPin,.userConfrimMPin{
-  display: flex;
-}
-.language,.newUser,.phoneNo{
+.nextStep{
+  background-color: #53a7e1;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
   font-size: 18px;
-  width: 30%;
+  cursor: pointer;
+  width: 50%;
 }
-/* .selectInput,#newUserName,#number,#otp{
-  width: 220px;
-} */
+.nextStep:hover{
+  color: #fff;
+  background-color: #eea01e;
+  transition: background-color 0.2s;
+}
 .checkbox{
   font-size: 18px;
 }
 .loginsignUp{
   font-size: 18px;
 }
+.language,.newUser,.phoneNo{
+  font-size: 18px;
+  width: 30%;
+}
+/* --------------------------For OTP CSS-------------------------------- */
+.signUpToContinue{
+  display: none;
+  background-color: #fff;
+}
+.verify{
+  background-color: #53a7e1;
+  width: 50%;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.verify:hover{
+  background-color: #eea01e;
+  transition: background-color 0.2s;
+}
+
+/* -----------------------------New User Credentials------------------------------------ */
+.userCredentials{
+  display: none;
+  background-color: #fff;
+}
+.otpText{width: 61%;}
+.userNewPassText{width: 80%;}
+.userConfrimPassText{width: 61%;}
+.userMPinText,.userConfrimMPinText{width: 50%;}
+.createAccount{
+  background-color: #53a7e1;
+  width: 50%;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.createAccount:hover{
+  background-color: #eea01e;
+  transition: background-color 0.2s; 
+}
+/* --------------------------------Login Footer css------------------------ */
 .loginFooter{
   background-color: aliceblue;
   padding: 5px 10px;
   border-radius: 20px;
 }
 
-/*home page css*/
-.mainContainer{
-	position: relative;
-	width: 100%;
-	height: 100%;
+.loginDetails{
+  color: #fff;
+  text-align: center;
+  width: 180px;
 }
-/*Menu Css*/
-.menuSection{
+.userSetting{
+  cursor: pointer;
+  color: blue;
+}
+.mySettingLanguage,.mySettingFrom{
+  width: 60%;
+}
+.clearfix{
+  margin: 10px;
+}
+.languageList{
+  padding: 10px 20px;
+    border-radius: 30px;
+    margin: 10px;
+    box-shadow: 0px 0px 4px 2px #eee;
+}
+
+
+/* ---------------------------------home page css------------------------------------------- */
+
+/*---------------Header css------------*/
+.headerSection{
 	background-image: linear-gradient(to right, #213576 , #1b7fbb);
 	padding: 5px;
 	width: 100%;
 	height: auto;
 	position: relative;
 }
-.logo img{
-    width: 12%;
-    height: 100%;
+.headerLogo img{
+  width: 12%;
+  height: 100%;
 }
-.logo span{
+.headerLogo span{
   font-size: 20px;
   color: #fff;
   font-weight: 600;
@@ -240,7 +240,7 @@
                 0 10px 10px rgba(0,0,0,.2),
                 0 20px 20px rgba(0,0,0,.15);
 }
-.logo .bills{
+.headerLogo .bills{
   color: #eb7d27;
 }
 .UserHover{
@@ -284,16 +284,17 @@
 .activeDownArrow{
 	color: #d9534f;
 }
+/* --------------------userPanel Detail css------------------------- */
 .userPanel{
 	display: none;
 	background: #fff;
-    position: absolute;
-    box-shadow: 0px 0px 7px 2px #464a4c;
-    padding: 20px;
-    width: 15%;
-    top: 70px;
-    right: 3.2%;
-    z-index: 1;
+  position: absolute;
+  box-shadow: 0px 4px 7px 1px #b3b3b330;
+  /* padding: 20px; */
+  width: 15%;
+  top: 70px;
+  right: 3.2%;
+  z-index: 1;
 }
 .userPanelIcon{
 	background: #31b0d5;
@@ -306,24 +307,26 @@
 }
 .upArrow{
 	text-align: center;
-    position: absolute;
-    top: -18px;
-    width: 100%;
-    left: 0;
-    font-weight: 700;
-    color: #fff
+  position: absolute;
+  top: -18px;
+  width: 100%;
+  left: 0;
+  font-weight: 700;
+  color: #fff
 }
-.userDetails{
-  float: right;
-  height: 60px;
+.UserDetails{
+  padding: 10px 10px 50px 10px;
+  background-color: #3061a0;
+  color: #fff;
 }
 .userPanelName{float: left;line-height: 20px;}
 .htLine{
 	background-color: #2fb5f282;
 }
-.userEditProfile,.companySetting,.languageSetting{
+.userEditProfile,.companySetting,.languageSetting,.logout{
   color:blue;
   cursor: pointer;
+  padding:0 10px;
 }
 .userEditProfile:hover,.companySetting:hover,.languageSetting:hover{
   color:#e96529;
@@ -336,17 +339,18 @@
   color: #673AB7;}
 .closeBtn{
 	position: absolute;
-    right: 3px;
-    top: -3px;
-    font-weight: 700;
-    color: #464a4cc4;
-    cursor: pointer;
+  right: 3px;
+  top: -3px;
+  font-weight: 700;
+  color: #464a4cc4;
+  cursor: pointer;
+  color:#fff;
 }
 .closeBtn:hover{
 	color: #d27f0a;
 }
-
-/*Footer*/
+/* -------------------------------------------------------------------------- */
+/*Footer css*/
 .pageFooter{
   background-color: #223576;
   height: 70px;

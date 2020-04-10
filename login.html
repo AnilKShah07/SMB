@@ -1,21 +1,26 @@
+
 <script class="text/javascript">
 	$(document).ready(function(){
 
+		// For New User
 		$(".newSignUp").click(function(){
 			$(".fromContainer").css("display","none");
 			$(".signUpContainer").css("display","block");
 		});
 
-		$(".signUpBtn").click(function(){
+		// for Next Step
+		$(".nextStep").click(function(){
 			$(".signUpContainer").css("display","none");
 			$(".signUpToContinue").css("display","block");
 		});
 
+		// for verify otp
 		$(".verify").click(function(){
 			$(".signUpToContinue").css("display","none");
 			$(".userCredentials").css("display","block");
 		});
 
+		// for create account
 		$(".createAccount").click(function() {
 			window.location.replace("home.html");
 		});  
@@ -23,14 +28,17 @@
 	});
 </script>
 
+<!-- ------------------------------------------------------------------------- -->
+
 <div class="container" id="idlogin">
 	<div class="row">
+
+		<!-- Welcome Logo and welcom Text -->
 		<div class="col-md-7">
 			<div class="smbLogo">
 				<img src="images/logo.png" alt="">
 				<div class="welcomeText">Show My <span>Bills</span></div>
 			</div>
-
 		</div>
 
 		<div class="col-md-5">
@@ -100,7 +108,7 @@
 						<label><input type="checkbox" value=""> I read and accept the <a href="#">License Agreement</a></label>
 					</div>
 					<center>
-						<div class="signUpBtn">Next Step</div>
+						<div class="nextStep">Next Step</div>
 					</center>
 					<br>
 					<div class="loginsignUp">
