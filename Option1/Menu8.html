@@ -3,113 +3,178 @@
 <head>
 	<title></title>
 	<style>
-		.localBankBox{
+		.localBox{
 			width: 1100px;
 			border: 1px solid #9E9E9E;
 			padding: 20px;
 		}
-		.borderRight{
-			border-right: 1px solid #9E9E9E;
+		.previewBox{
+			height: 300px;
+			background-color: antiquewhite;
 		}
-		
+		.headeDesign{
+			display: flex;
+		}
+		/* .headeDesign div{
+			width: 70px;
+			height: auto;
+			background: linear-gradient(to right, #213879, #eb7c2e);
+			position: relative;
+		}
+		.headeDesign div:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0px 36px 26px 0px;
+			border-color: transparent transparent #fff #fff;
+			transform: rotate(180deg);
+		} */
+		.saveBtn,.resetBtn,.editBtn,.exportBtn{
+			border: none;
+			background-color: #53a7e1;
+			padding: 7px 24px;
+			border-radius: 20px;
+			color: #fff;
+			cursor: pointer;
+		}
+		.resetBtn:hover,.saveBtn:hover,.editBtn:hover,.exportBtn:hover{
+			background-color: #eea01e;
+			transition: background-color 0.2s;
+		}
+		.editBtn,.exportBtn{
+			float:right;
+			margin:0 10px;
+		}
+		.VMsearchBar{
+			float: left;
+    		display: flex;
+		}
+		#VMidSearch{
+			border-radius: 5px 0px 0px 5px;
+    		border-right: none;
+		}
+		#VMsearchBtn{
+			width: 20%;
+			background-color: #fff;
+			border: 1px solid #607d8b59;
+			border-radius: 0px 5px 5px 0px;
+		}
+		table thead tr th{
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
-	<div class="localBankBox">
-		<h4 class="text-primary headeDesign"><div></div><u>Account & Tax Info</u></h4>
-		<br>
+	<div class="localBox">
+		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Version Management</u></h4>
+		<!-- <br>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="float-right">
-					<a href="#"><u>Save</u></a>
+					<a href="#"><u>Save</u></a>/<a href="#"><u>View</u></a>
 				</div>
 			</div>
-		</div>
-
+		</div> -->
+		
 		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Select Bank</span>
+			<div class="col-md-3">
+				<span>Release Type</span>
 			</div>
 			<div class="col-md-4">
 				<select class="form-control" id="sel1">
-					<option>SBI</option>
-					<option>IDBI</option>
-					<option>BOI</option>
-					<option>ICICI</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
 				</select>
 			</div>
 			<div class="col-md-5"></div>
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Registered mobile Number</span>
+			<div class="col-md-3">
+				<span>Brief Descripton Of Changes</span>
 			</div>
 			<div class="col-md-4">
-				<input type="number" class="form-control" placeholder="Enter registered mobile number" name="product">
+				<input type="text" class="form-control">
 			</div>
 			<div class="col-md-5"></div>
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Virtual Payment Address</span>
+			<div class="col-md-3">
+				<span>Upload Release Notes</span>
 			</div>
 			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="Enter virtual paument address" name="product">
+				<input type="file">
 			</div>
 			<div class="col-md-5"></div>
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>GST Registered Number</span>
+			<div class="col-md-12">
+				<center><input type="Reset" class="resetBtn"> <input type="submit" value="Save" class="saveBtn" data-toggle="modal" data-target="#productInfo"></center>
 			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="Enter GST registered number" name="product">
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="VMsearchBar">
+					<input type="text" class="form-control" placeholder="Search bank name" id="VMidSearch">
+					<button type="submit" id="VMsearchBtn"><i class="fa fa-search"></i></button>
+				</div>
+				<input type="submit" value="Edit" class="editBtn">
+				<input type="submit" value="Export" class="exportBtn">
 			</div>
-			<div class="col-md-5"></div>
 		</div>
 		<br>
-		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>SAC For Product Services</span>
-			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="994814" name="product">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Rate of IGST (%)</span>
-			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="18.00" name="product">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Rate of CGST (%)</span>
-			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="9.00" name="product">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-3 borderRight">
-				<span>Rate of SGST (%)</span>
-			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control"  placeholder="9.00" name="product">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
+		<table class="table table-bordered text-center">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Version</th>
+					<th>Release</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>2.02</td>
+					<td>Minor</td>
+					<td>Billing data download...</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>2.01</td>
+					<td>Major</td>
+					<td>Relese of Gujrati ver...</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>1.64</td>
+					<td>Minor</td>
+					<td>Stop Supply alert Add...</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>1.63</td>
+					<td>Minor</td>
+					<td>Round off Changed to...</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>1.62</td>
+					<td>Minor</td>
+					<td>Added GST Billing...</td>
+				</tr> 
+			</tbody>
+		</table>
+		
 		
 	</div>
 	

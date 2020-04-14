@@ -33,7 +33,7 @@
 			border-color: transparent transparent #fff #fff;
 			transform: rotate(180deg);
 		} */
-		.viewBtn{
+		.newBtn,.editBtn,.exportBtn{
 			border: none;
 			background-color: #53a7e1;
 			padding: 7px 24px;
@@ -41,9 +41,27 @@
 			color: #fff;
 			cursor: pointer;
 		}
-		.viewBtn:hover{
+		.newBtn:hover,.editBtn:hover,.exportBtn:hover{
 			background-color: #eea01e;
 			transition: background-color 0.2s;
+		}
+		.editBtn,.exportBtn,.newBtn{
+			float:right;
+			margin:0 10px;
+		}
+		.VMsearchBar{
+			float: left;
+    		display: flex;
+		}
+		#VMidSearch{
+			border-radius: 5px 0px 0px 5px;
+    		border-right: none;
+		}
+		#VMsearchBtn{
+			width: 20%;
+			background-color: #fff;
+			border: 1px solid #607d8b59;
+			border-radius: 0px 5px 5px 0px;
 		}
 		table thead tr th{
 			text-align: center;
@@ -52,137 +70,176 @@
 </head>
 <body>
 	<div class="localBox">
-		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Product Document</u></h4>
+		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Coordinators Mapping</u></h4>
 		<br>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="float-right">
-					<a href="#"><u>Save</u></a>/<a href="#"><u>View</u></a>
+				<div class="VMsearchBar">
+					<input type="text" class="form-control" placeholder="Search bank name" id="VMidSearch">
+					<button type="submit" id="VMsearchBtn"><i class="fa fa-search"></i></button>
 				</div>
+				<input type="submit" value="Export" class="exportBtn">
+				<input type="submit" value="Edit" class="editBtn" data-toggle="modal" data-target="#myModal1">
 			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-3">
-				<span>Selelct Document</span>
-			</div>
-			<div class="col-md-4">
-				<select class="form-control" id="sel1">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="col-md-5"></div>
 		</div>
 		<br>
-		<div class="row">
-			<div class="col-md-3">
-				<span>Select File</span>
-			</div>
-			<div class="col-md-4">
-				<input type="file">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-3">
-				<span>Release Date</span>
-			</div>
-			<div class="col-md-4">
-				<input type="date" class="form-control">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-12">
-				<input type="submit" class="float-right viewBtn" data-toggle="modal" data-target="#productInfo">
-			</div>
-		</div>
+		<table class="table table-bordered text-center">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Coordinator</th>
+					<th>Mobile</th>
+					<th>Biz Line</th>
+					<th>Biller</th>
+					<th>Mobile</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Manoj pande</td>
+					<td>9589732512</td>
+					<td>Oil</td>
+					<td>Satnam</td>
+					<td>9589732512</td>
+				</tr>
+				 
+			</tbody>
+		</table>
 
-		<!-- Modal -->
-		<div class="modal fade" id="productInfo" role="dialog">
-			<div class="modal-dialog modal-lg">
+		<!-- Add New Users -->
+		<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
 			
-			  <!-- Modal content-->
-			  <div class="modal-content">
+			<!-- Modal content-->
+			<div class="modal-content">
 				<div class="modal-header">
-				  <h4 class="modal-title"><u>Product Document</u></h4>
-				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Select Coordinator</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 				<div class="modal-body">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="float-right">
-								<a href="#"><u>Search</u></a>/<a href="#"><u>Export</u></a>
-							</div>
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>User Name</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Read Only</option>
+								<option>Editable</option>
+							</select>
 						</div>
 					</div>
-					<hr>
-					<table class="table table-bordered text-center">
-						<thead>
-						  <tr>
-							<th>Transaction ID</th>
-							<th>Document</th>
-							<th>Release Date</th>
-							<th>Action</th>
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr>
-							<td>172</td>
-							<td>About Show...</td>
-							<td>2 April 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>171</td>
-							<td>About Show...</td>
-							<td>28 March 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>170</td>
-							<td>About Show...</td>
-							<td>12 March 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>169</td>
-							<td>About Show...</td>
-							<td>28 Fab 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>168</td>
-							<td>About Show...</td>
-							<td>12 Fab 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>167</td>
-							<td>About Show...</td>
-							<td>25 Jan 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  <tr>
-							<td>166</td>
-							<td>About Show...</td>
-							<td>2 jan 2020</td>
-							<td><a href="#">Open</a></td>
-						  </tr>
-						  
-						</tbody>
-					</table>
-					
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Coordinators Language</span></div>
+						<div class="col-md-6"><input type="text" placeholder="ReadOnly" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Mobile Number</div>
+						<div class="col-md-6"><input type="text" placeholder="ReadOnly" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Filter Biller as per Language</div>
+						<div class="col-md-6"><input type="radio" name="optradio">&nbsp;Yes &nbsp;&nbsp;&nbsp;<input type="radio" name="optradio">&nbsp;No</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Number of Billers Mapped</div>
+						<div class="col-md-6"><input type="text" placeholder="ReadOnly" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Average Biller per Coordinator</div>
+						<div class="col-md-6"><input type="text" placeholder="ReadOnly" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Select Business Line</div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Search & Select Biller</div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Editable</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Biller City</div>
+						<div class="col-md-6 p-2"><input type="text" placeholder="Read Only" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Biller Language</div>
+						<div class="col-md-6 p-2"><input type="text" placeholder="Read Only" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Biller Mobile Number</div>
+						<div class="col-md-6 p-2"><input type="text" placeholder="Read Only" class="form-control"></div>
+					</div>
 				</div>
-			  </div>
-			  
+			</div>
+			
 			</div>
 		</div>
+		
 		
 	</div>
 	

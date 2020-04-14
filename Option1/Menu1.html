@@ -2,214 +2,159 @@
 <html>
 <head>
 	<title></title>
-
 	<style>
-		/* Style the tab */
-		.tab {
-		  float: left;
-		  border: 1px solid #ccc;
-		  background-color: #f1f1f1;
-		  width: 20%;
-		  height: 500px;
+		.bussinessBlock{
+			padding: 10px;
+			border: 1px solid #9e9e9e38;
 		}
-
-		/* Style the buttons inside the tab */
-		.tab .tablinks {
-		  display: block;
-		  background-color: inherit;
-		  color: black;
-		  padding: 22px 16px;
-		  width: 100%;
-		  border: none;
-		  outline: none;
-		  text-align: left;
-		  cursor: pointer;
-		  transition: 0.3s;
-		  font-size: 17px;
+		.receipt{
+			margin: 20px;
+			display: inline-block;
+			/* height: 300px; */
+			width: 230px;
+			box-shadow: 0px 0px 6px 1px #9e9e9e5c;
 		}
-
-		/* Change background color of buttons on hover */
-		.tab .tablinks:hover {
-			border-right: 3px solid #464a4c;
-		    background-image: linear-gradient(to right, #0275d8 , #0ab2e4);
-		    color: #fff;
+		.receiptHead{
+			padding: 10px;
+			background: cadetblue;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
 		}
-
-		/* Create an active/current "tab button" class */
-		.tab .tablinks.active {
-			border-right: 3px solid #464a4c;
-		    background-image: linear-gradient(to right, #0275d8 , #0ab2e4);
-		    color: #fff;
+		.bussinessCustomersDetails{
+			padding: 10px 20px;
 		}
-
-		/* Style the tab content */
-		.tabcontent {
-		  float: left;
-		  padding: 12px 12px;
-		  border: 1px solid #ccc;
-		  width: 80%;
-		  border-left: none;
-		  height: 500px;
+		.clsCustomersSpan1{
+			font-size: 16px;
+			font-weight: 600;
 		}
-		/*Table css*/
-		.table-bordered {
-		    border: 2px solid #31b0d5;
-		    border-top: none;
-		}
-		.thead-dark{
-			background-color: #31b0d5;
-		    color: #fff;
-		    letter-spacing: 1.5px;
-		}
-		.icons a{
-			padding: 15px;
-    		text-align: center;
-		}
-		.btn-default{
-			box-shadow: 0px 0px 9px 1px #6e7172bd;
-			cursor: pointer;
-		}
-		.btn-default:hover{
-			box-shadow: 0px 0px 9px 2px #8c8f90;
-			/*padding: .6rem 1.1rem;*/
-		    width: 124px;
-    		height: 39px;
-		}
-		.dataLinks .import{
-			margin: 0 8px;
-		}
-		.fa {
-		    display: inline-block;
-		    /*font: normal normal normal 14px/1 FontAwesome;*/
-		    font-size: inherit;
-		    text-rendering: auto;
-		    -webkit-font-smoothing: antialiased;
-		    -moz-osx-font-smoothing: grayscale;
-		}
-		.fa-file-excel-o:before {
-		    content: "\f1c3";
-		}
-		.fa-file-zip-o:before, .fa-file-archive-o:before {
-		    content: "\f1c6";
+		.clsCustomersSpan2{
+			float: right;
 		}
 	</style>
 </head>
 <body>
-	<div class="tab">
-	  <button class="tablinks tablinks1" onclick="openTabs(event, 'idSearch')" id="defaultOpen">Search</button>
-	  <button class="tablinks tablinks2" onclick="openTabs(event, 'idData')">Data</button>
-	</div>
+	
+	<div class="bussinessBlock">
+		<h4 class="text-primary">Dashboard</h4>
 
-	<div id="idSearch" class="tabcontent">
-	  <div class="serachHead"><h3>Search</h3></div>
-	  	<div class="form-horizontal">
-		    <div class="form-group">
-		      <span class="control-label float-left col-sm-2" for="email">Field 1:</span>
-		      <span class="float-left col-sm-6">
-		        <input type="text" class="form-control"  placeholder="Please type here" name="email" required>
-		      </span>
-		      <span class="col-sm-4"></span>
-		    </div>
-		    <br>
-		    <div class="form-group">
-		      <span class="control-label float-left col-sm-2" for="email">Field 2:</span>
-		      <span class="float-left col-sm-6">
-		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
-		      </span>
-		      <span class="col-sm-4"></span>
-		    </div>
-		    <br>
-		    <div class="form-group">
-		      <span class="control-label float-left col-sm-2" for="email">Field 3:</span>
-		      <span class="float-left col-sm-6">
-		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
-		      </span>
-		      <span class="col-sm-4"></span>
-		    </div>
-		    <br>
-		    <div class="form-group">
-		      <span class="control-label float-left col-sm-2" for="email">Field 4:</span>
-		      <span class="float-left col-sm-6">
-		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
-		      </span>
-		      <span class="col-sm-4"></span>
-		    </div>
-		    <div class="form-group">        
-		      <div class="col-sm-12">
-		        <button type="submit" class="btn btn-default float-right" id="editDelete">Edit / Delete</button>
-		      </div>
-		    </div>
+		<div class="receipt">
+			<div class="receiptHead">Online Receipts</div>
+			<div class="bussinessCustomersDetails">
+				<div class="customersNameBox">
+					<span class="clsCustomersSpan1">Customers</span>
+					<span class="clsCustomersSpan2">97</span>
+				</div>
+	
+				<!-- <div class="customersIdBox">
+					<span class="clsCustomersSpan1">Customer I'd</span>
+					<span class="clsCustomersSpan2">007</span>
+				</div> -->
+	
+				<div class="customersAmmount">
+					<span class="clsCustomersSpan1">Ammount</span>
+					<span  class="clsCustomersSpan2">12874.00</span>
+				</div>
+				<!-- <hr>
+				<div class="dummyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div> -->
+			</div>
+			
 		</div>
-		  
 
+		<div class="receipt">
+			<div class="receiptHead">Cash Receipts</div>
+			<div class="bussinessCustomersDetails">
+				<div class="customersNameBox">
+					<span class="clsCustomersSpan1">Customers</span>
+					<span class="clsCustomersSpan2">14</span>
+				</div>
+	
+				<!-- <div class="customersIdBox">
+					<span class="clsCustomersSpan1">Customer I'd</span>
+					<span class="clsCustomersSpan2">007</span>
+				</div> -->
+	
+				<div class="customersAmmount">
+					<span class="clsCustomersSpan1">Ammount</span>
+					<span  class="clsCustomersSpan2">12874.00</span>
+				</div>
+				<!-- <hr>
+				<div class="dummyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div> -->
+			</div>
+			
+		</div>
+
+		<div class="receipt">
+			<div class="receiptHead">Pending Payments</div>
+			<div class="bussinessCustomersDetails">
+				<div class="customersNameBox">
+					<span class="clsCustomersSpan1">Customers</span>
+					<span class="clsCustomersSpan2">07</span>
+				</div>
+	
+				<!-- <div class="customersIdBox">
+					<span class="clsCustomersSpan1">Customer I'd</span>
+					<span class="clsCustomersSpan2">007</span>
+				</div> -->
+	
+				<div class="customersAmmount">
+					<span class="clsCustomersSpan1">Ammount</span>
+					<span  class="clsCustomersSpan2">12874.00</span>
+				</div>
+				<!-- <hr>
+				<div class="dummyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div> -->
+			</div>
+		
+		</div>
+
+		<div class="receipt">
+			<div class="receiptHead">Today's Transactions</div>
+			<div class="bussinessCustomersDetails">
+				<div class="customersNameBox">
+					<span class="clsCustomersSpan1">Customers</span>
+					<span class="clsCustomersSpan2">16</span>
+				</div>
+	
+				<!-- <div class="customersIdBox">
+					<span class="clsCustomersSpan1">Customer I'd</span>
+					<span class="clsCustomersSpan2">007</span>
+				</div> -->
+	
+				<div class="customersAmmount">
+					<span class="clsCustomersSpan1">Ammount</span>
+					<span  class="clsCustomersSpan2">12874.oo</span>
+				</div>
+				<!-- <hr>
+				<div class="dummyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div> -->
+			</div>
+			
+		</div>
+
+		<!-- <div class="receipt">
+			<div class="receiptHead">Online Receipt</div>
+			<div class="bussinessCustomersDetails">
+				<div class="customersNameBox">
+					<span class="clsCustomersSpan1">Customer Name</span>
+					<span class="clsCustomersSpan2">Saurabh sir</span>
+				</div>
+	
+				<div class="customersIdBox">
+					<span class="clsCustomersSpan1">Customer I'd</span>
+					<span class="clsCustomersSpan2">007</span>
+				</div>
+	
+				<div class="customersAmmount">
+					<span class="clsCustomersSpan1">Ammount</span>
+					<span  class="clsCustomersSpan2">1,2,874/-</span>
+				</div>
+				<hr>
+				<div class="dummyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+			</div>
+			
+		</div> -->
+
+		<!-- <div class="receipt"></div> -->
+		
 	</div>
-
-
-	<div id="idData" class="tabcontent">
-	  <div class="dataHead float-left"><h3>Data</h3></div>
-	  <div class="dataLinks float-right">
-	  	<span><u><a href="#">Add New <b>+</b></a></u></span>
-	  	<span class="import"><u><a href="#">Import <i class="fa fa-file-excel-o"></i></a></u></span>
-	  	<span><u><a href="#">Export <i class="fa fa-file-zip-o"></i></a></u></span>
-	  </div>
-	  <table class="table table-bordered">
-	    <thead class="thead-dark">
-	      <tr>
-	        <th>First Name</th>
-	        <th>Last Name</th>
-	        <th>Email</th>
-	        <th>Action</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      <tr>
-	        <td><p>First Name</p></td>
-	        <td><p>Last Name</p></td>
-	        <td><p>abc@gmail.com</p></td>
-	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
-	      </tr>
-	      <tr>
-	        <td><p>First Name</p></td>
-	        <td><p>Last Name</p></td>
-	        <td><p>abc@gmail.com</p></td>
-	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
-	      </tr>
-	      <tr>
-	        <td><p>First Name</p></td>
-	        <td><p>Last Name</p></td>
-	        <td><p>abc@gmail.com</p></td>
-	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
-	      </tr>
-	      
-	      
-	    </tbody>
-	  </table>
-	</div>
-
-	<script>
-	function openTabs(evt, tabName) {
-	  var i, tabcontent, tablinks;
-	  tabcontent = document.getElementsByClassName("tabcontent");
-	  for (i = 0; i < tabcontent.length; i++) {
-	    tabcontent[i].style.display = "none";
-	  }
-	  tablinks = document.getElementsByClassName("tablinks");
-	  for (i = 0; i < tablinks.length; i++) {
-	    tablinks[i].className = tablinks[i].className.replace(" active", "");
-	  }
-	  document.getElementById(tabName).style.display = "block";
-	  evt.currentTarget.className += " active";
-	}
-
-	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("defaultOpen").click();
-
-	$("#editDelete").click(function(){
-		$('#idData').css("display","block");
-		$('#idSearch').css("display","none");
-		$(".tablinks1").removeClass("active");
-		$(".tablinks2").addClass("active");
-	});
-	</script>
 </body>
 </html>

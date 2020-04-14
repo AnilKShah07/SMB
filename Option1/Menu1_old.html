@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		/* Style the tab */
+		.tab {
+		  float: left;
+		  border: 1px solid #ccc;
+		  background-color: #f1f1f1;
+		  width: 20%;
+		  height: 500px;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab .tablinks {
+		  display: block;
+		  background-color: inherit;
+		  color: black;
+		  padding: 22px 16px;
+		  width: 100%;
+		  border: none;
+		  outline: none;
+		  text-align: left;
+		  cursor: pointer;
+		  transition: 0.3s;
+		  font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab .tablinks:hover {
+			border-right: 3px solid #464a4c;
+		    background-image: linear-gradient(to right, #0275d8 , #0ab2e4);
+		    color: #fff;
+		}
+
+		/* Create an active/current "tab button" class */
+		.tab .tablinks.active {
+			border-right: 3px solid #464a4c;
+		    background-image: linear-gradient(to right, #0275d8 , #0ab2e4);
+		    color: #fff;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  float: left;
+		  padding: 12px 12px;
+		  border: 1px solid #ccc;
+		  width: 80%;
+		  border-left: none;
+		  height: 500px;
+		}
+		/*Table css*/
+		.table-bordered {
+		    border: 2px solid #31b0d5;
+		    border-top: none;
+		}
+		.thead-dark{
+			background-color: #31b0d5;
+		    color: #fff;
+		    letter-spacing: 1.5px;
+		}
+		.icons a{
+			padding: 15px;
+    		text-align: center;
+		}
+		.btn-default{
+			box-shadow: 0px 0px 9px 1px #6e7172bd;
+			cursor: pointer;
+		}
+		.btn-default:hover{
+			box-shadow: 0px 0px 9px 2px #8c8f90;
+			/*padding: .6rem 1.1rem;*/
+		    width: 124px;
+    		height: 39px;
+		}
+		.dataLinks .import{
+			margin: 0 8px;
+		}
+		.fa {
+		    display: inline-block;
+		    /*font: normal normal normal 14px/1 FontAwesome;*/
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+		.fa-file-excel-o:before {
+		    content: "\f1c3";
+		}
+		.fa-file-zip-o:before, .fa-file-archive-o:before {
+		    content: "\f1c6";
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+	  <button class="tablinks tablinks1" onclick="openTabs(event, 'idSearch')" id="defaultOpen">Search</button>
+	  <button class="tablinks tablinks2" onclick="openTabs(event, 'idData')">Data</button>
+	</div>
+
+	<div id="idSearch" class="tabcontent">
+	  <div class="serachHead"><h3>Search</h3></div>
+	  	<div class="form-horizontal">
+		    <div class="form-group">
+		      <span class="control-label float-left col-sm-2" for="email">Field 1:</span>
+		      <span class="float-left col-sm-6">
+		        <input type="text" class="form-control"  placeholder="Please type here" name="email" required>
+		      </span>
+		      <span class="col-sm-4"></span>
+		    </div>
+		    <br>
+		    <div class="form-group">
+		      <span class="control-label float-left col-sm-2" for="email">Field 2:</span>
+		      <span class="float-left col-sm-6">
+		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
+		      </span>
+		      <span class="col-sm-4"></span>
+		    </div>
+		    <br>
+		    <div class="form-group">
+		      <span class="control-label float-left col-sm-2" for="email">Field 3:</span>
+		      <span class="float-left col-sm-6">
+		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
+		      </span>
+		      <span class="col-sm-4"></span>
+		    </div>
+		    <br>
+		    <div class="form-group">
+		      <span class="control-label float-left col-sm-2" for="email">Field 4:</span>
+		      <span class="float-left col-sm-6">
+		        <input type="text" class="form-control" placeholder="Please type here" name="email" required>
+		      </span>
+		      <span class="col-sm-4"></span>
+		    </div>
+		    <div class="form-group">        
+		      <div class="col-sm-12">
+		        <button type="submit" class="btn btn-default float-right" id="editDelete">Edit / Delete</button>
+		      </div>
+		    </div>
+		</div>
+		  
+
+	</div>
+
+
+	<div id="idData" class="tabcontent">
+	  <div class="dataHead float-left"><h3>Data</h3></div>
+	  <div class="dataLinks float-right">
+	  	<span><u><a href="#">Add New <b>+</b></a></u></span>
+	  	<span class="import"><u><a href="#">Import <i class="fa fa-file-excel-o"></i></a></u></span>
+	  	<span><u><a href="#">Export <i class="fa fa-file-zip-o"></i></a></u></span>
+	  </div>
+	  <table class="table table-bordered">
+	    <thead class="thead-dark">
+	      <tr>
+	        <th>First Name</th>
+	        <th>Last Name</th>
+	        <th>Email</th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td><p>First Name</p></td>
+	        <td><p>Last Name</p></td>
+	        <td><p>abc@gmail.com</p></td>
+	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
+	      </tr>
+	      <tr>
+	        <td><p>First Name</p></td>
+	        <td><p>Last Name</p></td>
+	        <td><p>abc@gmail.com</p></td>
+	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
+	      </tr>
+	      <tr>
+	        <td><p>First Name</p></td>
+	        <td><p>Last Name</p></td>
+	        <td><p>abc@gmail.com</p></td>
+	        <td class="icons"><a href="">Edit <i class='fas'>&#xf303;</i></a>/<a href="">Delete <i class='far'>&#xf2ed;</i></a></td>
+	      </tr>
+	      
+	      
+	    </tbody>
+	  </table>
+	</div>
+
+	<script>
+	function openTabs(evt, tabName) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+	    tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(tabName).style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+
+	$("#editDelete").click(function(){
+		$('#idData').css("display","block");
+		$('#idSearch').css("display","none");
+		$(".tablinks1").removeClass("active");
+		$(".tablinks2").addClass("active");
+	});
+	</script>
+</body>
+</html>

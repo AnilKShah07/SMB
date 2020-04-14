@@ -33,7 +33,7 @@
 			border-color: transparent transparent #fff #fff;
 			transform: rotate(180deg);
 		} */
-		.saveBtn,.resetBtn,.editBtn,.exportBtn{
+		.newBtn,.editBtn,.exportBtn{
 			border: none;
 			background-color: #53a7e1;
 			padding: 7px 24px;
@@ -41,11 +41,11 @@
 			color: #fff;
 			cursor: pointer;
 		}
-		.resetBtn:hover,.saveBtn:hover,.editBtn:hover,.exportBtn:hover{
+		.newBtn:hover,.editBtn:hover,.exportBtn:hover{
 			background-color: #eea01e;
 			transition: background-color 0.2s;
 		}
-		.editBtn,.exportBtn{
+		.editBtn,.exportBtn,.newBtn{
 			float:right;
 			margin:0 10px;
 		}
@@ -66,69 +66,24 @@
 		table thead tr th{
 			text-align: center;
 		}
+		.SaveView{
+			width:90%;
+			margin:auto;
+			margin-top:10px;
+		}
 	</style>
 </head>
 <body>
 	<div class="localBox">
-		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Version Management</u></h4>
-		<!-- <br>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="float-right">
-					<a href="#"><u>Save</u></a>/<a href="#"><u>View</u></a>
-				</div>
-			</div>
-		</div> -->
-		
-		<div class="row">
-			<div class="col-md-3">
-				<span>Release Type</span>
-			</div>
-			<div class="col-md-4">
-				<select class="form-control" id="sel1">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="col-md-5"></div>
-		</div>
+		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Business Lines Master</u></h4>
 		<br>
-		<div class="row">
-			<div class="col-md-3">
-				<span>Brief Descripton Of Changes</span>
-			</div>
-			<div class="col-md-4">
-				<input type="text" class="form-control">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-3">
-				<span>Upload Release Notes</span>
-			</div>
-			<div class="col-md-4">
-				<input type="file">
-			</div>
-			<div class="col-md-5"></div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-12">
-				<center><input type="Reset" class="resetBtn"> <input type="submit" value="Save" class="saveBtn" data-toggle="modal" data-target="#productInfo"></center>
-			</div>
-		</div>
-		<hr>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="VMsearchBar">
 					<input type="text" class="form-control" placeholder="Search bank name" id="VMidSearch">
 					<button type="submit" id="VMsearchBtn"><i class="fa fa-search"></i></button>
 				</div>
-				<input type="submit" value="Edit" class="editBtn">
-				<input type="submit" value="Export" class="exportBtn">
+				<input type="submit" value="Edit" class="editBtn" data-toggle="modal" data-target="#myModal1">
 			</div>
 		</div>
 		<br>
@@ -136,44 +91,125 @@
 			<thead>
 				<tr>
 					<th>Select</th>
-					<th>Version</th>
-					<th>Release</th>
-					<th>Description</th>
+					<th>Busines</th>
+					<th>Category</th>
+					<th>App Charges(%)</th>
+					<th>Status</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td><input type="radio" name="optradio"></td>
-					<td>2.02</td>
-					<td>Minor</td>
-					<td>Billing data download...</td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
 				</tr>
 				<tr>
 					<td><input type="radio" name="optradio"></td>
-					<td>2.01</td>
-					<td>Major</td>
-					<td>Relese of Gujrati ver...</td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
 				</tr>
 				<tr>
 					<td><input type="radio" name="optradio"></td>
-					<td>1.64</td>
-					<td>Minor</td>
-					<td>Stop Supply alert Add...</td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
 				</tr>
 				<tr>
 					<td><input type="radio" name="optradio"></td>
-					<td>1.63</td>
-					<td>Minor</td>
-					<td>Round off Changed to...</td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
 				</tr>
 				<tr>
 					<td><input type="radio" name="optradio"></td>
-					<td>1.62</td>
-					<td>Minor</td>
-					<td>Added GST Billing...</td>
-				</tr> 
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Oil Supply</td>
+					<td>Material</td>
+					<td>21.00</td>
+					<td>Active</td>
+				</tr>
+				 
 			</tbody>
 		</table>
+
+		<!-- Add New Users -->
+		<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
+			
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Business Lines Master</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+					<div class='SaveView'>
+						<div class="float-right">
+						<a href="#">Save</a>/<a href="#">View</a>
+						</div>
+					</div>
+				
+				<div class="modal-body">
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Business Line</span></div>
+						<div class="col-md-6"><input type="text" placeholder="ReadOnly" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Upload Icon</div>
+						<div class="col-md-6"><input type="file"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Category</div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">App Charges (% of Bill)</div>
+						<div class="col-md-6"><input type="text" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">App Charges (% of Bill)</div>
+						<div class="col-md-6"><input type="text" class="form-control"></div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Status</div>
+						<div class="col-md-6 p-2"><input type="radio" name="optradio">&nbsp;Active &nbsp;&nbsp;&nbsp;<input type="radio" name="optradio">&nbsp;Inactive</div>
+					</div>
+			</div>
+			
+			</div>
+		</div>
 		
 		
 	</div>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.localBox{
+			width: 1100px;
+			border: 1px solid #9E9E9E;
+			padding: 20px;
+		}
+		.previewBox{
+			height: 300px;
+			background-color: antiquewhite;
+		}
+		.headeDesign{
+			display: flex;
+		}
+		/* .headeDesign div{
+			width: 70px;
+			height: auto;
+			background: linear-gradient(to right, #213879, #eb7c2e);
+			position: relative;
+		}
+		.headeDesign div:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0px 36px 26px 0px;
+			border-color: transparent transparent #fff #fff;
+			transform: rotate(180deg);
+		} */
+		.newBtn,.editBtn,.exportBtn{
+			border: none;
+			background-color: #53a7e1;
+			padding: 7px 24px;
+			border-radius: 20px;
+			color: #fff;
+			cursor: pointer;
+		}
+		.newBtn:hover,.editBtn:hover,.exportBtn:hover{
+			background-color: #eea01e;
+			transition: background-color 0.2s;
+		}
+		.editBtn,.exportBtn,.newBtn{
+			float:right;
+			margin:0 10px;
+		}
+		.VMsearchBar{
+			float: left;
+    		display: flex;
+		}
+		#VMidSearch{
+			border-radius: 5px 0px 0px 5px;
+    		border-right: none;
+		}
+		#VMsearchBtn{
+			width: 20%;
+			background-color: #fff;
+			border: 1px solid #607d8b59;
+			border-radius: 0px 5px 5px 0px;
+		}
+		table thead tr th{
+			text-align: center;
+		}
+		.SaveView{
+			width:90%;
+			margin:auto;
+			margin-top:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="localBox">
+		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Business Line Settings</u></h4>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<input type="submit" value="Edit" class="editBtn" data-toggle="modal" data-target="#myModal1">
+			</div>
+		</div>
+		<br>
+		<table class="table table-bordered text-center">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Busines Lines</th>
+					<th>Billing Frequency</th>
+					<th>Model</th>
+					<th>Serving Frequency</th>
+					<th>Record</th>
+					<th>Data</th>
+					<th>Calculations</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Reparing</td>
+					<td>Money</td>
+					<td>Advance</td>
+					<td>Periodic</td>
+					<td>No</td>
+					<td>Exception</td>
+					<td>Fixed Billing</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Reparing</td>
+					<td>Money</td>
+					<td>Advance</td>
+					<td>Periodic</td>
+					<td>No</td>
+					<td>Exception</td>
+					<td>Fixed Billing</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Reparing</td>
+					<td>Money</td>
+					<td>Advance</td>
+					<td>Periodic</td>
+					<td>No</td>
+					<td>Exception</td>
+					<td>Fixed Billing</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Reparing</td>
+					<td>Money</td>
+					<td>Advance</td>
+					<td>Periodic</td>
+					<td>No</td>
+					<td>Exception</td>
+					<td>Fixed Billing</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>Reparing</td>
+					<td>Money</td>
+					<td>Advance</td>
+					<td>Periodic</td>
+					<td>No</td>
+					<td>Exception</td>
+					<td>Fixed Billing</td>
+				</tr>
+				 
+			</tbody>
+		</table>
+
+		<!-- Add New Users -->
+		<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
+			
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Localization of Biz Line</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+					<div class='SaveView'>
+						<div class="float-right">
+						<a href="#">Save</a>/<a href="#">View</a>
+						</div>
+					</div>
+				
+				<div class="modal-body">
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Select Business Line</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Reparing</option>
+								<option>Maintenance</option>
+								<option>Recycling</option>
+								<option>Refurbishing</option>
+								<option>Scarpping</option>
+								<option>Demolishing</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2">Billing Frequency</div>
+						<div class="col-md-6">
+							<input type="text" placeHolder="Read Only">
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Billing Model</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Advance</option>
+								<option>Postpaid</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Supply/Service Frequency</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Periodic</option>
+								<option>On Demand</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Record Keeping</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Data Entry Type</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Exception</option>
+								<option>Transaction</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Billing Calculations</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>Fixed Billing</option>
+								<option>Record Billing</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Business Record Name</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='row p-2'>
+						<div class="col-md-6 p-2"><span>Quantity</span></div>
+						<div class="col-md-6">
+							<select class="form-control" id="sel1">
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+					</div>
+
+			</div>
+			
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</body>
+</html>
