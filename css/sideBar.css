@@ -20,6 +20,7 @@
     background-color: #3163a2;
     box-shadow: 4px -8px 8px 2px #9E9E9E;
     padding: 10px;
+    overflow-y:scroll;
 }
 .card{
     background: #3163a2;
@@ -76,4 +77,27 @@
     color: #eb7c49;
     background-image: linear-gradient(to right, #3162a2,#3162a2, #ea7427 130%);
     border-right: 1px solid #eb7c49;
+}
+
+/* Scroll Css */
+/* width */
+.sideBar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.sideBar::-webkit-scrollbar-track {
+  box-shadow:  0 0 5px #223576; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.sideBar::-webkit-scrollbar-thumb {
+  background: #03259a; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.sideBar::-webkit-scrollbar-thumb:hover {
+  background-color: #2196F3;
 }

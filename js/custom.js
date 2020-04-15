@@ -71,7 +71,6 @@ $(document).ready(function(){
 
     // For Side pannel Auto height
     var windowHeight = window.innerHeight;
-   // console.log("height"+x+'px' , "width"+y);
     var sidebarHeight = windowHeight-144+"px";
     $(".sideBar").css('height',sidebarHeight);
 
