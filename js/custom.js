@@ -17,11 +17,6 @@ $(document).ready(function(){
       $(".downArrow").removeClass("activeDownArrow");
     });
 
-});
-
-
-
-$(document).ready(function(){
     // For toggle
     $(".toggle").text("<");
     var flag=true;
@@ -41,9 +36,9 @@ $(document).ready(function(){
     var btnsGroup = $(".btnsGroup");
     var btns = $(".clickMenu");
     $(btns).click(function(){
-        var pages = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15'];
+        var pages = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18'];
         var getId = $(this).attr('id');
-        //console.log("Clicked button id " + getId);
+        console.log("Clicked button id " + getId);
         $('.sideBarOutput').load('Option1/Menu'+pages[getId-1]+'.html');
         $( this ).parent().find( 'li.activeTab' ).removeClass( 'activeTab' );
         $( this ).addClass( 'activeTab' );
@@ -73,14 +68,11 @@ $(document).ready(function(){
         
     });
 
+
+    // For Side pannel Auto height
+    var windowHeight = window.innerHeight;
+   // console.log("height"+x+'px' , "width"+y);
+    var sidebarHeight = windowHeight-144+"px";
+    $(".sideBar").css('height',sidebarHeight);
+
 });
-
-
-
-
-// For test purpose
-var x = window.outerHeight;
-var y = window.innerWidth;
-//var headerHeight = $(".headerSection").attr();
-console.log("height"+x , "width"+y);
-$(".sideBar").css('height','500px');
