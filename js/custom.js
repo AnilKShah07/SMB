@@ -42,6 +42,7 @@ $(document).ready(function(){
         $('.sideBarOutput').load('Option1/Menu'+pages[getId-1]+'.html');
         $( this ).parent().find( 'li.activeTab' ).removeClass( 'activeTab' );
         $( this ).addClass( 'activeTab' );
+        
     });
 
     $(".card-link").click(function(){
@@ -68,10 +69,11 @@ $(document).ready(function(){
         
     });
 
-
     // For Side pannel Auto height
     var windowHeight = window.innerHeight;
     var sidebarHeight = windowHeight-144+"px";
-    $(".sideBar").css('height',sidebarHeight);
+    $(".sideBar,.sideBarOutput").css('height',sidebarHeight);
+    console.log("windowHeight"+ windowHeight);
+
 
 });
