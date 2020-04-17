@@ -65,8 +65,8 @@
     padding: 3px;
     cursor: pointer;
 }
-.clickMenu{
-    color: #fff;
+.clickMenu1,.clickMenu2{
+  color: #fff;
 }
 .sideBar ul li:hover{
     color: #ff9d0d;

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.localBox{
+			width: 1100px;
+			border: 1px solid #9E9E9E;
+			padding: 20px;
+		}
+		.previewBox{
+			height: 300px;
+			background-color: antiquewhite;
+		}
+		.headeDesign{
+			display: flex;
+		}
+		/* .headeDesign div{
+			width: 70px;
+			height: auto;
+			background: linear-gradient(to right, #213879, #eb7c2e);
+			position: relative;
+		}
+		.headeDesign div:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0px 36px 26px 0px;
+			border-color: transparent transparent #fff #fff;
+			transform: rotate(180deg);
+		} */
+		.searchBar{
+			float: left;
+			display: flex;
+		}
+		#idSearch{
+			border-radius: 5px 0px 0px 5px;
+    		border-right: none;
+		}
+		#searchBtn{
+			width: 20%;
+			background-color: #fff;
+			border: 1px solid #607d8b59;
+			border-radius: 0px 5px 5px 0px;
+		}
+		#searchBtn:hover{
+			background-color: #51a1f2;
+			cursor: pointer;
+			color: #fff;
+		}
+
+		.pageBtn{
+			border: none;
+			background-color: #53a7e1;
+			padding: 7px 24px;
+			border-radius: 20px;
+			color: #fff;
+			cursor: pointer;
+		}
+		.pageBtn:hover{
+			background-color: #eea01e;
+			transition: background-color 0.2s;
+		}
+		.pageBtn{
+			float:right;
+			margin:0 10px;
+		}
+		table thead tr th{
+			text-align: center;
+		}
+		.SaveView{
+			width:90%;
+			margin:auto;
+			margin-top:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="localBox">
+		<h4 class="text-primary headeDesign"><div></div>&nbsp;<u>Items Master</u></h4>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="searchBar">
+					<input type="text" class="form-control" placeholder="Search bank name" id="idSearch">
+					<button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
+				</div>
+
+				<input type="submit" value="Import" class="pageBtn">
+				<input type="submit" value="Export" class="pageBtn">
+				
+				<input type="submit" value="Edit" class="pageBtn" data-toggle="modal" data-target="#editModal">
+				<input type="submit" value="New" class="pageBtn" data-toggle="modal" data-target="#newModal">
+			</div>
+		</div>
+		<br>
+		<table class="table table-bordered text-center">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Business</th>
+					<th>Item Description</th>
+					<th>Unit</th>
+					<th>Price</th>
+					<th>WEF</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>A2Z Stationers</td>
+					<td>A4 papers</td>
+					<td>Dozen</td>
+					<td>188.00</td>
+					<td>05-jan-2020</td>
+					<td>Active</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>A2Z Stationers</td>
+					<td>A4 papers</td>
+					<td>Dozen</td>
+					<td>188.00</td>
+					<td>05-jan-2020</td>
+					<td>Active</td>
+				</tr><tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>A2Z Stationers</td>
+					<td>A4 papers</td>
+					<td>Dozen</td>
+					<td>188.00</td>
+					<td>05-jan-2020</td>
+					<td>Active</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>A2Z Stationers</td>
+					<td>A4 papers</td>
+					<td>Dozen</td>
+					<td>188.00</td>
+					<td>05-jan-2020</td>
+					<td>Active</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name="optradio"></td>
+					<td>A2Z Stationers</td>
+					<td>A4 papers</td>
+					<td>Dozen</td>
+					<td>188.00</td>
+					<td>05-jan-2020</td>
+					<td>Active</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Edit Users -->
+		<div class="modal fade" id="editModal" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Items Master (Edit)</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					
+					<div class='SaveView'>
+						<div class="float-right">
+						<a href="#">Save</a>
+						</div>
+					</div>
+					
+					<div class="modal-body">
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Select Business line</span></div>
+							<div class="col-md-6">
+								<select class="form-control" id="sel1">
+									<option>A2Z Stationers</option>
+									<option>Diamond Books</option>
+									<option>Cutting Oils</option>
+								</select>
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2">Item Description</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Unity of Measurment</span></div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Price / Fee per Unit</span></div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>With Effective From</span></div>
+							<div class="col-md-6">
+								<input type="date" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Status</span></div>
+							<div class="col-md-6">
+								<input type="radio" name="optradio">&nbsp;Active &nbsp;&nbsp;&nbsp;<input type="radio" name="optradio">&nbsp;Inactive
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- New Record -->
+		<div class="modal fade" id="newModal" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Items Master (Save)</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					
+					<div class='SaveView'>
+						<div class="float-right">
+						<a href="#">Save</a>
+						</div>
+					</div>
+					
+					<div class="modal-body">
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Select Business line</span></div>
+							<div class="col-md-6">
+								<select class="form-control" id="sel1">
+									<option>A2Z Stationers</option>
+									<option>Diamond Books</option>
+									<option>Cutting Oils</option>
+								</select>
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2">Item Description</div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Unity of Measurment</span></div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Price / Fee per Unit</span></div>
+							<div class="col-md-6">
+								<input type="text" class="form-control">
+							</div>
+						</div>
+
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>With Effective From</span></div>
+							<div class="col-md-6">
+								<input type="date" class="form-control">
+							</div>
+						</div>
+						
+						<div class='row p-2'>
+							<div class="col-md-6 p-2"><span>Status</span></div>
+							<div class="col-md-6">
+								<input type="radio" name="optradio">&nbsp;Active &nbsp;&nbsp;&nbsp;<input type="radio" name="optradio">&nbsp;Inactive
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</body>
+</html>
